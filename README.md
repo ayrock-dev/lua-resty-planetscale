@@ -1,6 +1,6 @@
 # lua-resty-planetscale
 
-Lua PlanetScale driver library for use in context of [ngx_lua](#) or [OpenResty](#) to execute database queries over http(s).
+Lua PlanetScale driver library for use in context of [ngx_lua](https://github.com/openresty/lua-nginx-module) or [OpenResty](ngx_luahttp://openresty.org/) to execute database queries over http(s).
 
 ## Status
 
@@ -32,7 +32,7 @@ local planetscale = require('resty.planetscale')
 local db = planetscale.new({
   url = 'mysql://username:password@host.com/example'
 })
-local result = db.execute('SELECT version();')
+local result = db:execute('SELECT version();')
 ```
 
 ## Reference
@@ -86,11 +86,11 @@ local db = planetscale.new({
 })
 ```
 
-### db.execute
+### db:execute
 
-> :warning: TODO: implement
+> :warning: TODO: document
 
-### db.refresh
+### db:refresh
 
 > :warning: TODO: document
 
